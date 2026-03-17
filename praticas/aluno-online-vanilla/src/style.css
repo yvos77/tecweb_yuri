@@ -1,0 +1,148 @@
+/* =========================
+   VARIÁVEIS E RESET
+========================= */
+
+:root {
+  --cor-fundo: #e9e9e9;
+  --cor-texto: #303030;
+  --cor-sidebar: #ededed;
+  --cor-card-header: #e0e0e0;
+  --cor-branco: #ffffff;
+  --cor-borda: #d1d1d1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BASE
+========================= */
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+aside {
+  width: 260px;
+  background-color: var(--cor-sidebar);
+  padding: 40px 25px;
+  border-right: 1px solid var(--cor-borda);
+}
+
+aside header h2 {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+
+nav ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+nav ul li {
+  margin-bottom: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+  flex: 1;
+  padding: 40px 60px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* HEADER PRINCIPAL */
+
+main > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main > header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+/* AVATAR */
+
+figure img {
+  width: 60px;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+article {
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+article header h3 {
+  background-color: var(--cor-card-header);
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+article ul {
+  padding: 20px;
+  list-style-position: inside;
+  list-style: none;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+
+  body {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+}
