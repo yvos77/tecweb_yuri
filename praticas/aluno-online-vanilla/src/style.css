@@ -3,7 +3,7 @@
   --cor-texto: #303030;
   --cor-sidebar: #ededed;
   --cor-card-header: #e0e0e0;
-  --cor-branco: #ffffff;
+  --cor-branco: #fff;
   --cor-borda: #d1d1d1;
 }
 
@@ -17,7 +17,6 @@ body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: var(--cor-texto);
   background-color: var(--cor-fundo);
-
   display: flex;
   min-height: 100vh;
 }
@@ -53,7 +52,6 @@ nav ul li a {
 main {
   flex: 1;
   padding: 40px 60px;
-
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -98,8 +96,7 @@ article ul {
   list-style-position: inside;
 }
 
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
   body {
     flex-direction: column;
   }
@@ -111,5 +108,4 @@ article ul {
   main {
     padding: 20px;
   }
-
 }
