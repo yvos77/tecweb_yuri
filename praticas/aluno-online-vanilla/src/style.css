@@ -1,0 +1,205 @@
+:root {
+  --cor-fundo: #e9e9e9;
+  --cor-texto: #303030;
+  --cor-sidebar: #ededed;
+  --cor-card-header: #e0e0e0;
+  --cor-branco: #fff;
+  --cor-borda: #d1d1d1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  display: flex;
+  min-height: 100vh;
+}
+
+aside {
+  width: 260px;
+  background-color: var(--cor-sidebar);
+  padding: 40px 25px;
+  border-right: 1px solid var(--cor-borda);
+}
+
+aside header h2 {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+
+nav ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+nav ul li {
+  margin-bottom: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+main {
+  flex: 1;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+main > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main > header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+figure img {
+  width: 60px;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+article {
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+article header h3 {
+  background-color: var(--cor-card-header);
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+article ul {
+  padding: 20px;
+  list-style-position: inside;
+}
+
+@media (width <= 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  main {
+    padding: 20px;
+  }
+}
+
+/* =========================================
+   ESTILOS DA PÁGINA DE LOGIN (Prática 03)
+   ========================================= */
+
+body.login-page {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body.login-page main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+body.login-page form {
+  background-color: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+body.login-page form h2 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+body.login-page form img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+body.login-page fieldset {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+body.login-page label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+body.login-page input {
+  padding: 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline-color: var(--cor-texto);
+}
+
+body.login-page button {
+  background-color: var(--cor-texto);
+  color: var(--cor-fundo);
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: opacity 0.2s ease;
+}
+
+body.login-page button:hover {
+  opacity: 0.8;
+}
+
+body.login-page .error-message {
+  color: red;
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-height: 1.2em; 
+}
+
+body.login-page footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
