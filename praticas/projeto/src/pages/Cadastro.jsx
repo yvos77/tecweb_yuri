@@ -152,7 +152,7 @@ function Cadastro() {
           </form>
         </div>
       </div>
-    </>S
+    </>
   )
 }
 
