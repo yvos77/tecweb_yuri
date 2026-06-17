@@ -1,19 +1,44 @@
 {
-  "posts": [
+  "livros": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id": "1",
+      "titulo": "Dom Casmurro",
+      "autor": "Machado de Assis",
+      "genero": "Romance",
+      "ano": 1899,
+      "lido": true
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "titulo": "Neuromancer",
+      "autor": "William Gibson",
+      "genero": "Ficção",
+      "ano": 1984,
+      "lido": true,
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "titulo": "Clean Code",
+      "autor": "Robert C. Martin",
+      "genero": "Técnico",
+      "ano": 2008,
+      "lido": false
+    },
+    {
+      "id": "4",
+      "titulo": "1984",
+      "autor": "George Orwell",
+      "genero": "Ficção",
+      "ano": 1949,
+      "lido": true
+    },
+    {
+      "titulo": "Fahrenheit 451",
+      "autor": "Bradbury",
+      "genero": "Ficção",
+      "ano": 1953,
+      "lido": false,
+      "id": "Nsw6hZj"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
