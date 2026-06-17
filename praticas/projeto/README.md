@@ -1,5 +1,11 @@
 # 📚 Estante Digital (React)
 
+Integrantes: 
+- Yuri Victor
+- Gabriel Vieira Braga
+- Felipe Oliveira Cunha
+- Alanna Tomaz
+
 Aplicação web para gerenciar uma biblioteca pessoal de livros. Conversão do
 projeto original (HTML/CSS/JS) para **React**, com integração a uma **API REST
 local** (json-server). Projeto da disciplina de **Tecnologia Web**.
