@@ -1,0 +1,81 @@
+
+/* ===== Variáveis e reset ===== */
+:root {
+  --cor-primaria:     #1a1a2e;
+  --cor-secundaria:   #e8572a;
+  --cor-fundo:        #faf8f4;
+  --cor-fundo-alt:    #f0ece4;
+  --cor-texto:        #1a1a2e;
+  --cor-texto-suave:  #6b6475;
+  --cor-borda:        #ddd8ce;
+  --cor-branca:       #ffffff;
+  --cor-erro:         #c0392b;
+  --cor-sucesso:      #1e8449;
+
+  --fonte-display: 'DM Serif Display', Georgia, serif;
+  --fonte-corpo:   'DM Sans', system-ui, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+
+  --sombra-card:  0 2px 12px rgba(26, 26, 46, 0.08);
+  --sombra-hover: 0 8px 28px rgba(26, 26, 46, 0.14);
+
+  --transicao: 0.2s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--fonte-corpo);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Tipografia ===== */
+h1, h2, h3 { font-family: var(--fonte-display); line-height: 1.2; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: 1.15rem; }
+em { font-style: italic; color: var(--cor-secundaria); }
+a  { color: inherit; text-decoration: none; }
+
+/* ===== Layout ===== */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ===== Botões (usados em várias páginas) ===== */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--fonte-corpo);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transicao);
+  text-align: center;
+}
+
+.btn-primary         { background: var(--cor-secundaria); color: var(--cor-branca); border-color: var(--cor-secundaria); }
+.btn-primary:hover   { background: #c94a22; border-color: #c94a22; }
+.btn-secondary       { background: transparent; color: var(--cor-primaria); border-color: var(--cor-borda); }
+.btn-secondary:hover { background: var(--cor-fundo-alt); border-color: var(--cor-primaria); }
+.btn-outline         { background: transparent; color: var(--cor-secundaria); border-color: var(--cor-secundaria); font-size: 0.85rem; padding: 0.5rem 1.1rem; }
+.btn-outline:hover   { background: var(--cor-secundaria); color: var(--cor-branca); }
+
+/* ===== Cabeçalho de páginas internas (Cadastro e Listagem) ===== */
+.page-header {
+  background: var(--cor-branca);
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+}
+
+.page-header h1 { color: var(--cor-primaria); margin-bottom: 0.4rem; }
+.page-header p  { color: var(--cor-texto-suave); font-size: 0.95rem; }
