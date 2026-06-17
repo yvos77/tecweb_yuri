@@ -1,4 +1,6 @@
 // Card de um livro, com botão de alternar lido/não lido.
+import './CardLivro.css'
+
 function CardLivro({ livro, onAlternarLido }) {
   return (
     <div className={`card-livro${livro.lido ? ' lido' : ''}`}>

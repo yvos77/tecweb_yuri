@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLivros } from '../context/LivrosContext.jsx'
 import CardLivro from '../components/CardLivro.jsx'
+import './Listagem.css'
 
 const FILTROS = ['Todos', 'Ficção', 'Romance', 'Técnico', 'Outro']
 
