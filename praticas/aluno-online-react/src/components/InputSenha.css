@@ -1,0 +1,31 @@
+.input-senha { margin-bottom: 1.1rem; }
+
+.input-senha label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #1f2933;
+}
+
+.input-senha input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d2d6dc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #1f2933;
+  background: #fff;
+}
+
+.input-senha input:focus {
+  outline: none;
+  border-color: #6b7280;
+}
+
+.input-senha .input-erro {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  color: #d12c2c;
+}
