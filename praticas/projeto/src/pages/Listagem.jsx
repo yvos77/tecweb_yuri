@@ -1,8 +1,19 @@
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useLivros } from '../context/LivrosContext.jsx'
+import CardLivro from '../components/CardLivro.jsx'
+import './Listagem.css'
+
 const FILTROS = ['Todos', 'Ficção', 'Romance', 'Técnico', 'Outro']
 
-// Estrutura base da listagem. Consumo do Context, renderização dos cards
-// e filtro funcional entram nas issues #13 e #14.
 function Listagem() {
+  const { livros, carregando, erro, alternarLido } = useLivros()
+  const [filtro, setFiltro] = useState('Todos')
+
+  // Aplica o filtro por gênero.
+  const lista = filtro === 'Todos' ? livros : livros.filter((l) => l.genero === filtro)
+  const contador = lista.length === 1 ? '1 livro' : `${lista.length} livros`
+
   return (
     <>
       <header className="page-header">
@@ -14,21 +25,41 @@ function Listagem() {
         <div className="listagem-toolbar">
           <div className="toolbar-left">
             <h2>Coleção</h2>
-            <span className="contador-livros"></span>
+            <span className="contador-livros">{contador}</span>
           </div>
 
           <div className="filtro-grupo">
             {FILTROS.map((f) => (
-              <button key={f} className={`filtro-btn${f === 'Todos' ? ' ativo' : ''}`}>
+              <button
+                key={f}
+                className={`filtro-btn${filtro === f ? ' ativo' : ''}`}
+                onClick={() => setFiltro(f)}
+              >
                 {f}
               </button>
             ))}
           </div>
         </div>
 
-        <div className="livros-grid">
-          {/* Os cards de livros serão renderizados aqui (#13) */}
-        </div>
+        {carregando && <p className="lista-vazia">Carregando livros...</p>}
+        {erro && <p className="lista-vazia">Erro ao carregar: {erro}</p>}
+
+        {!carregando && !erro && (
+          <div className="livros-grid">
+            {lista.length === 0 ? (
+              <div className="lista-vazia">
+                <strong>Nenhum livro encontrado.</strong>
+                <p>
+                  Adicione livros pela página de <Link to="/cadastro">cadastro</Link>.
+                </p>
+              </div>
+            ) : (
+              lista.map((livro) => (
+                <CardLivro key={livro.id} livro={livro} onAlternarLido={alternarLido} />
+              ))
+            )}
+          </div>
+        )}
       </div>
     </>
   )
