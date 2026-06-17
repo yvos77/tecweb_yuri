@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useLivros } from '../context/LivrosContext.jsx'
+import './Cadastro.css'
 
 const GENEROS = ['Ficção', 'Romance', 'Técnico', 'Outro']
 const ANO_ATUAL = new Date().getFullYear()
